@@ -1,0 +1,99 @@
+frozen model vs saved predictions, max |dp|: {'valid': 1.6653345369377348e-16, 'test': 1.6653345369377348e-16}
+additivity: max |sum(SHAP)+base - margin| = 8.44e-15  (base value -1.6971 log-odds)
+shap.TreeExplainer vs LightGBM pred_contrib: max |diff| = 0.00e+00
+refit logreg vs saved valid predictions: max |dp| = 9.95e-17
+refit logreg vs saved test predictions: max |dp| = 1.11e-16
+
+LightGBM mean |SHAP| (log-odds):
+                   valid_all  valid_non_same_day  test_all  test_non_same_day  valid_same_day  test_same_day
+lead_days             1.0451              0.8292    0.9931             0.7707          1.4320         1.4159
+age                   0.2127              0.2055    0.2131             0.2018          0.2256         0.2346
+neighbourhood_grp     0.1683              0.1427    0.1670             0.1417          0.2142         0.2149
+prior_noshow_rate     0.0518              0.0320    0.0589             0.0394          0.0873         0.0960
+sched_hour            0.0501              0.0565    0.0523             0.0590          0.0384         0.0396
+appt_weekday          0.0258              0.0289    0.0247             0.0258          0.0202         0.0226
+prior_appts           0.0185              0.0104    0.0233             0.0151          0.0329         0.0389
+is_female             0.0222              0.0098    0.0217             0.0097          0.0443         0.0443
+scholarship           0.0148              0.0180    0.0145             0.0171          0.0091         0.0094
+prior_noshows         0.0055              0.0031    0.0073             0.0042          0.0098         0.0131
+sched_weekday         0.0065              0.0086    0.0065             0.0084          0.0028         0.0027
+alcoholism            0.0052              0.0063    0.0049             0.0058          0.0031         0.0030
+handicap              0.0024              0.0011    0.0021             0.0011          0.0047         0.0040
+diabetes              0.0020              0.0022    0.0020             0.0021          0.0016         0.0017
+hypertension          0.0016              0.0011    0.0015             0.0011          0.0026         0.0024
+same_day              0.0000              0.0000    0.0000             0.0000          0.0000         0.0000
+
+LightGBM mean |SHAP - subset mean| (centred, within-subset spread):
+                   valid_all  valid_non_same_day  test_all  test_non_same_day  valid_same_day  test_same_day
+lead_days             1.0395              0.1855    0.9878             0.2102          0.1601         0.1639
+age                   0.2130              0.2067    0.2136             0.2038          0.2258         0.2351
+neighbourhood_grp     0.1683              0.1426    0.1670             0.1417          0.2134         0.2149
+sched_hour            0.0506              0.0555    0.0538             0.0620          0.0372         0.0383
+prior_noshow_rate     0.0563              0.0307    0.0660             0.0385          0.1045         0.1189
+appt_weekday          0.0247              0.0271    0.0245             0.0255          0.0196         0.0226
+prior_appts           0.0217              0.0130    0.0270             0.0179          0.0371         0.0447
+scholarship           0.0152              0.0183    0.0143             0.0165          0.0096         0.0100
+is_female             0.0218              0.0095    0.0214             0.0094          0.0440         0.0442
+sched_weekday         0.0064              0.0085    0.0064             0.0084          0.0027         0.0026
+alcoholism            0.0053              0.0062    0.0051             0.0059          0.0037         0.0036
+prior_noshows         0.0066              0.0038    0.0097             0.0058          0.0115         0.0170
+diabetes              0.0021              0.0022    0.0021             0.0022          0.0017         0.0020
+hypertension          0.0017              0.0011    0.0015             0.0011          0.0026         0.0024
+handicap              0.0020              0.0008    0.0016             0.0007          0.0042         0.0032
+same_day              0.0000              0.0000    0.0000             0.0000          0.0000         0.0000
+
+LogReg mean |linear contribution| (log-odds):
+                   valid_all  valid_non_same_day  test_all  test_non_same_day  valid_same_day  test_same_day
+same_day              0.9057              0.6931    0.8977             0.6931          1.2868         1.2868
+age                   0.1817              0.1805    0.1843             0.1840          0.1838         0.1849
+prior_noshows         0.1253              0.1054    0.1560             0.1338          0.1609         0.1984
+neighbourhood_grp     0.1439              0.1445    0.1409             0.1422          0.1428         0.1385
+prior_appts           0.0881              0.0583    0.1089             0.0726          0.1414         0.1779
+lead_days             0.1081              0.1175    0.1058             0.1136          0.0911         0.0911
+sched_hour            0.0606              0.0607    0.0621             0.0634          0.0606         0.0596
+prior_noshow_rate     0.0413              0.0371    0.0462             0.0435          0.0487         0.0513
+scholarship           0.0447              0.0439    0.0438             0.0421          0.0462         0.0469
+appt_weekday          0.0361              0.0359    0.0408             0.0409          0.0364         0.0408
+sched_weekday         0.0223              0.0231    0.0242             0.0238          0.0207         0.0250
+hypertension          0.0227              0.0234    0.0229             0.0235          0.0216         0.0219
+alcoholism            0.0174              0.0156    0.0177             0.0161          0.0206         0.0207
+diabetes              0.0137              0.0141    0.0139             0.0141          0.0129         0.0136
+handicap              0.0035              0.0034    0.0035             0.0034          0.0038         0.0039
+is_female             0.0002              0.0002    0.0002             0.0002          0.0002         0.0002
+
+rank agreement (16 raw features):
+  valid_all            rho=0.344 p=0.192
+  valid_non_same_day   rho=0.429 p=0.097
+  test_all             rho=0.385 p=0.141
+  test_non_same_day    rho=0.394 p=0.131
+  valid_same_day       rho=0.321 p=0.226
+  test_same_day        rho=0.291 p=0.274
+
+GROUPED mean |contribution| (log-odds):
+                               lgbm_SHAP                                                                            logreg_linear                                                                           
+                               valid_all valid_non_same_day test_all test_non_same_day valid_same_day test_same_day     valid_all valid_non_same_day test_all test_non_same_day valid_same_day test_same_day
+lead_time (lead_days+same_day)    1.0451             0.8292   0.9931            0.7707         1.4320        1.4159        0.9905             0.7744   0.9694            0.7546         1.3780        1.3780
+age                               0.2127             0.2055   0.2131            0.2018         0.2256        0.2346        0.1817             0.1805   0.1843            0.1840         0.1838        0.1849
+neighbourhood_grp                 0.1683             0.1427   0.1670            0.1417         0.2142        0.2149        0.1439             0.1445   0.1409            0.1422         0.1428        0.1385
+history (3 features)              0.0614             0.0350   0.0718            0.0445         0.1089        0.1238        0.1416             0.1011   0.1790            0.1344         0.2142        0.2639
+sched_hour                        0.0501             0.0565   0.0523            0.0590         0.0384        0.0396        0.0606             0.0607   0.0621            0.0634         0.0606        0.0596
+appt_weekday                      0.0258             0.0289   0.0247            0.0258         0.0202        0.0226        0.0361             0.0359   0.0408            0.0409         0.0364        0.0408
+is_female                         0.0222             0.0098   0.0217            0.0097         0.0443        0.0443        0.0002             0.0002   0.0002            0.0002         0.0002        0.0002
+scholarship                       0.0148             0.0180   0.0145            0.0171         0.0091        0.0094        0.0447             0.0439   0.0438            0.0421         0.0462        0.0469
+sched_weekday                     0.0065             0.0086   0.0065            0.0084         0.0028        0.0027        0.0223             0.0231   0.0242            0.0238         0.0207        0.0250
+alcoholism                        0.0052             0.0063   0.0049            0.0058         0.0031        0.0030        0.0174             0.0156   0.0177            0.0161         0.0206        0.0207
+handicap                          0.0024             0.0011   0.0021            0.0011         0.0047        0.0040        0.0035             0.0034   0.0035            0.0034         0.0038        0.0039
+diabetes                          0.0020             0.0022   0.0020            0.0021         0.0016        0.0017        0.0137             0.0141   0.0139            0.0141         0.0129        0.0136
+hypertension                      0.0016             0.0011   0.0015            0.0011         0.0026        0.0024        0.0227             0.0234   0.0229            0.0235         0.0216        0.0219
+
+rank agreement (grouped, 13 features):
+  valid_all            rho=0.813 p=0.0007  lgbm top5=['lead_time (lead_days+same_day)', 'age', 'neighbourhood_grp', 'history (3 features)', 'sched_hour']  logreg top5=['lead_time (lead_days+same_day)', 'age', 'neighbourhood_grp', 'history (3 features)', 'sched_hour']
+  valid_non_same_day   rho=0.874 p=0.0001  lgbm top5=['lead_time (lead_days+same_day)', 'age', 'neighbourhood_grp', 'sched_hour', 'history (3 features)']  logreg top5=['lead_time (lead_days+same_day)', 'age', 'neighbourhood_grp', 'history (3 features)', 'sched_hour']
+  test_all             rho=0.830 p=0.0005  lgbm top5=['lead_time (lead_days+same_day)', 'age', 'neighbourhood_grp', 'history (3 features)', 'sched_hour']  logreg top5=['lead_time (lead_days+same_day)', 'age', 'history (3 features)', 'neighbourhood_grp', 'sched_hour']
+  test_non_same_day    rho=0.874 p=0.0001  lgbm top5=['lead_time (lead_days+same_day)', 'age', 'neighbourhood_grp', 'sched_hour', 'history (3 features)']  logreg top5=['lead_time (lead_days+same_day)', 'age', 'neighbourhood_grp', 'history (3 features)', 'sched_hour']
+  valid_same_day       rho=0.703 p=0.0073  lgbm top5=['lead_time (lead_days+same_day)', 'age', 'neighbourhood_grp', 'history (3 features)', 'is_female']  logreg top5=['lead_time (lead_days+same_day)', 'history (3 features)', 'age', 'neighbourhood_grp', 'sched_hour']
+  test_same_day        rho=0.709 p=0.0067  lgbm top5=['lead_time (lead_days+same_day)', 'age', 'neighbourhood_grp', 'history (3 features)', 'is_female']  logreg top5=['lead_time (lead_days+same_day)', 'history (3 features)', 'age', 'neighbourhood_grp', 'sched_hour']
+
+LR standardised coefficients (numeric): {"age": -0.215, "is_female": -0.0, "scholarship": 0.074, "hypertension": -0.029, "diabetes": 0.027, "alcoholism": 0.05, "handicap": 0.013, "lead_days": 0.14, "same_day": -0.944, "sched_hour": 0.07, "prior_appts": -0.127, "prior_noshows": 0.174, "prior_noshow_rate": 0.004, "has_history": -0.039}
+
+wrote results/shap_summary.json and reports/figures/shap_*.png

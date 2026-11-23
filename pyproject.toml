@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "noshow-predictor"
+version = "1.0.0"
+description = "Leakage-checked appointment no-show prediction with SHAP (Kaggle 'Medical Appointment No Shows', 2016)"
+readme = "README.md"
+requires-python = "==3.13.*"
+# Exact pins mirror requirements.txt (the versions every reported number was produced with).
+dependencies = [
+    "numpy==2.5.3",
+    "pandas==3.0.5",
+    "scikit-learn==1.9.1",
+    "scipy==1.18.1",
+    "lightgbm==4.7.0",
+    "shap==0.54.1",
+    "matplotlib==3.11.2",
+]
+
+[project.optional-dependencies]
+test = ["pytest==9.1.1"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

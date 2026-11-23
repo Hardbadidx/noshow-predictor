@@ -1,0 +1,13 @@
+# Data is not redistributed: download from Kaggle (see README)
+data/
+*.csv
+# Row-level outputs (predictions contain patient IDs)
+results/predictions_*.csv
+# Audit printouts that echo raw rows
+reports/raw_audit_output.txt
+reports/raw_audit_followup.txt
+
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/

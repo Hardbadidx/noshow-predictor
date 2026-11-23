@@ -1,0 +1,11 @@
+prevalence all_rows     roc 0.5000 (json 0.5000)  pr 0.1841 (json 0.1841)
+prevalence non_same_day roc 0.5000 (json 0.5000)  pr 0.2595 (json 0.2595)
+lead_only  all_rows     roc 0.6912 (json 0.6912)  pr 0.2780 (json 0.2780)
+lead_only  non_same_day roc 0.5487 (json 0.5487)  pr 0.2858 (json 0.2858)
+logreg     all_rows     roc 0.7219 (json 0.7219)  pr 0.3266 (json 0.3266)
+logreg     non_same_day roc 0.5870 (json 0.5870)  pr 0.3229 (json 0.3229)
+lgbm       all_rows     roc 0.7249 (json 0.7249)  pr 0.3276 (json 0.3276)
+lgbm       non_same_day roc 0.5901 (json 0.5901)  pr 0.3242 (json 0.3242)
+max abs difference vs metrics.json: 5.55e-17
+lgbm - logreg all_rows     dROC +0.0031 [-0.0018, +0.0081]  dPR +0.0016 [-0.0097, +0.0125]
+lgbm - logreg non_same_day dROC +0.0029 [-0.0055, +0.0105]  dPR +0.0008 [-0.0091, +0.0110]

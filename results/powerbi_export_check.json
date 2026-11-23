@@ -1,0 +1,117 @@
+{
+  "rows": 109899,
+  "no_shows": 22098,
+  "no_show_rate": 0.2011,
+  "appointment_date_min": "2016-04-29",
+  "appointment_date_max": "2016-06-08",
+  "min_neighbourhood_appts": 300,
+  "neighbourhoods_total": 81,
+  "neighbourhoods_shown": 65,
+  "rows_in_other_group": 2049,
+  "by_lead_bucket": [
+    {
+      "lead_bucket": "Same day",
+      "appointments": 38493,
+      "no_shows": 1783,
+      "sms_sent": 0,
+      "no_show_rate": 0.0463
+    },
+    {
+      "lead_bucket": "1-2 days",
+      "appointments": 11860,
+      "no_shows": 2694,
+      "sms_sent": 0,
+      "no_show_rate": 0.2272
+    },
+    {
+      "lead_bucket": "3-7 days",
+      "appointments": 20120,
+      "no_shows": 5017,
+      "sms_sent": 11548,
+      "no_show_rate": 0.2494
+    },
+    {
+      "lead_bucket": "8-14 days",
+      "appointments": 11921,
+      "no_shows": 3630,
+      "sms_sent": 7004,
+      "no_show_rate": 0.3045
+    },
+    {
+      "lead_bucket": "15-30 days",
+      "appointments": 17224,
+      "no_shows": 5592,
+      "sms_sent": 10519,
+      "no_show_rate": 0.3247
+    },
+    {
+      "lead_bucket": "31+ days",
+      "appointments": 10281,
+      "no_shows": 3382,
+      "sms_sent": 6410,
+      "no_show_rate": 0.329
+    }
+  ],
+  "by_lead_bucket_and_sms": [
+    {
+      "lead_bucket": "Same day",
+      "sms_received": "No SMS",
+      "appointments": 38493,
+      "no_show_rate": 0.0463
+    },
+    {
+      "lead_bucket": "1-2 days",
+      "sms_received": "No SMS",
+      "appointments": 11860,
+      "no_show_rate": 0.2272
+    },
+    {
+      "lead_bucket": "3-7 days",
+      "sms_received": "No SMS",
+      "appointments": 8572,
+      "no_show_rate": 0.2652
+    },
+    {
+      "lead_bucket": "3-7 days",
+      "sms_received": "SMS sent",
+      "appointments": 11548,
+      "no_show_rate": 0.2376
+    },
+    {
+      "lead_bucket": "8-14 days",
+      "sms_received": "No SMS",
+      "appointments": 4917,
+      "no_show_rate": 0.3378
+    },
+    {
+      "lead_bucket": "8-14 days",
+      "sms_received": "SMS sent",
+      "appointments": 7004,
+      "no_show_rate": 0.2811
+    },
+    {
+      "lead_bucket": "15-30 days",
+      "sms_received": "No SMS",
+      "appointments": 6705,
+      "no_show_rate": 0.3664
+    },
+    {
+      "lead_bucket": "15-30 days",
+      "sms_received": "SMS sent",
+      "appointments": 10519,
+      "no_show_rate": 0.298
+    },
+    {
+      "lead_bucket": "31+ days",
+      "sms_received": "No SMS",
+      "appointments": 3871,
+      "no_show_rate": 0.3735
+    },
+    {
+      "lead_bucket": "31+ days",
+      "sms_received": "SMS sent",
+      "appointments": 6410,
+      "no_show_rate": 0.302
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "note": "Paired patient-clustered bootstrap (500, seed 1) of LightGBM minus logistic regression on test, from saved predictions.",
+  "all_rows": {
+    "roc_auc_diff_mean": 0.003148183686307051,
+    "roc_auc_diff_ci95": [
+      -0.0018391750088223413,
+      0.008136642663085966
+    ],
+    "pr_auc_diff_mean": 0.0015818048238787643,
+    "pr_auc_diff_ci95": [
+      -0.009704248789492213,
+      0.012473748968731675
+    ],
+    "n_boot": 500
+  },
+  "non_same_day": {
+    "roc_auc_diff_mean": 0.0028566399501813162,
+    "roc_auc_diff_ci95": [
+      -0.005465507535318511,
+      0.0104674888073227
+    ],
+    "pr_auc_diff_mean": 0.0008468290577332155,
+    "pr_auc_diff_ci95": [
+      -0.009148488170531733,
+      0.010961019476163755
+    ],
+    "n_boot": 500
+  },
+  "max_abs_diff_vs_metrics_json": 5.551115123125783e-17
+}

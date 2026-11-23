@@ -1,0 +1,20 @@
+{
+  "rows": 110527,
+  "blank_cells_total": 0,
+  "label_values": {
+    "No": 88208,
+    "Yes": 22319
+  },
+  "noshow_rate_raw": 0.201933,
+  "patients_unique": 62299,
+  "appointment_id_dupes": 0,
+  "exact_dupes": 0,
+  "dupes_except_appointment_id_extra": 618,
+  "age_negative": 1,
+  "age_over_100": 7,
+  "age_zero": 3539,
+  "appt_before_sched_timestamp": 38568,
+  "appt_before_sched_date": 5,
+  "same_day_bookings": 38563,
+  "appointment_dates": 27
+}
